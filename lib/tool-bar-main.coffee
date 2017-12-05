@@ -51,6 +51,14 @@ module.exports =
       callback: 'settings-view:open'
       tooltip: 'Open Settings View'
       iconset: 'ion'
+      
+    @toolBar.addSpacer()
+
+    @toolBar.addButton
+      icon: 'social-github'
+      callback: 'github:toggle-git-tab'
+      tooltip: 'Toggle Git Tab'
+      iconset: 'ion'
 
     if atom.inDevMode()
       @toolBar.addSpacer()
