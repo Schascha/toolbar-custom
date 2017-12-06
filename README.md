@@ -11,6 +11,7 @@ Simple tool bar using [tool-bar](https://atom.io/packages/tool-bar) package.
 * Save
 * Find in Buffer
 * Replace in Buffer
+* Toggle Git Tab
 * Toggle Command Palette
 * Open Settings View
 
