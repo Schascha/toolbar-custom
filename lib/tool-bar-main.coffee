@@ -42,6 +42,11 @@ module.exports =
     @toolBar.addSpacer()
 
     @toolBar.addButton
+      icon: 'social-github'
+      callback: 'github:toggle-git-tab'
+      tooltip: 'Toggle Git Tab'
+      iconset: 'ion'
+    @toolBar.addButton
       icon: 'navicon-round'
       callback: 'command-palette:toggle'
       tooltip: 'Toggle Command Palette'
@@ -50,14 +55,6 @@ module.exports =
       icon: 'gear-a'
       callback: 'settings-view:open'
       tooltip: 'Open Settings View'
-      iconset: 'ion'
-      
-    @toolBar.addSpacer()
-
-    @toolBar.addButton
-      icon: 'social-github'
-      callback: 'github:toggle-git-tab'
-      tooltip: 'Toggle Git Tab'
       iconset: 'ion'
 
     if atom.inDevMode()
