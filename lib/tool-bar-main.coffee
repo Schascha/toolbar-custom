@@ -57,6 +57,14 @@ module.exports =
       tooltip: 'Open Settings View'
       iconset: 'ion'
 
+    @toolBar.addSpacer()
+
+    @toolBar.addButton
+      icon: 'code-working'
+      callback: 'whitespace:convert-spaces-to-tabs'
+      tooltip: 'Convert Spaces to Tabs'
+      iconset: 'ion'
+
     if atom.inDevMode()
       @toolBar.addSpacer()
 

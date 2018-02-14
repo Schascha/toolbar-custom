@@ -14,6 +14,7 @@ This is a fork from [suda/tool-bar-main](https://atom.io/packages/tool-bar-main)
 * Toggle Git Tab
 * Toggle Command Palette
 * Open Settings View
+* Convert Spaces to Tabs
 
 When in **dev mode** it adds two more buttons:
 
