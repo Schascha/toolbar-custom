@@ -1,10 +1,10 @@
-# Main Tool Bar package
+# Custom Tool Bar package
 
 Simple tool bar using [tool-bar](https://atom.io/packages/tool-bar) package.
 
 This is a fork from [suda/tool-bar-main](https://atom.io/packages/tool-bar-main).
 
-# Buttons
+## Buttons
 
 * New File
 * Open...
