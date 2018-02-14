@@ -1,10 +1,10 @@
 {
   "name": "toolbar-custom",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Custom Atom Tool Bar. This is a fork from suda/tool-bar-main.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Schascha/toolbar-custom.git"
+    "url": "https://github.com/Schascha/toolbar-custom.git"
   },
   "keywords": [
     "atom",
