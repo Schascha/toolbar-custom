@@ -4,7 +4,7 @@
   "description": "Custom Atom Tool Bar. This is a fork from suda/tool-bar-main.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Schascha/toolbar-main.git"
+    "url": "git@github.com:Schascha/toolbar-custom.git"
   },
   "keywords": [
     "atom",
