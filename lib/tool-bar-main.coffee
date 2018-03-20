@@ -47,6 +47,11 @@ module.exports =
       tooltip: 'Toggle Git Tab'
       iconset: 'ion'
     @toolBar.addButton
+      icon: 'sourcetree-plain'
+      callback: 'open-in-sourcetree:open'
+      tooltip: 'Open in SourceTree'
+      iconset: 'devicon'
+    @toolBar.addButton
       icon: 'navicon-round'
       callback: 'command-palette:toggle'
       tooltip: 'Toggle Command Palette'
