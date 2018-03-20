@@ -13,7 +13,7 @@
     "tool-bar"
   ],
   "license": "MIT",
-  "main": "./lib/tool-bar-main",
+  "main": "./lib/toolbar",
   "dependencies": {
     "atom-package-deps": "^4.6.1"
   },
