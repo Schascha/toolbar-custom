@@ -1,6 +1,6 @@
 {
   "name": "toolbar-custom",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Custom Atom Tool Bar. Inspired by suda/tool-bar-main.",
   "repository": {
     "type": "git",
