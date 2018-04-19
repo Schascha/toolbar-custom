@@ -1,4 +1,11 @@
 module.exports =
+
+    config:
+        'convert-spaces-to-tabs':
+            title: 'Enable Convert Spaces to Tabs'
+            type: 'boolean'
+            default: true
+
     activate: (state) ->
         require('atom-package-deps').install('tool-bar-main')
 
@@ -46,12 +53,6 @@ module.exports =
             callback: 'github:toggle-git-tab'
             tooltip: 'Toggle Git Tab'
             iconset: 'ion'
-        if atom.packages.getLoadedPackage('open-in-sourcetree')
-            @toolBar.addButton
-                icon: 'sourcetree-plain'
-                callback: 'open-in-sourcetree:open'
-                tooltip: 'Open in SourceTree'
-                iconset: 'devicon'
         @toolBar.addButton
             icon: 'navicon-round'
             callback: 'command-palette:toggle'
@@ -65,11 +66,18 @@ module.exports =
 
         @toolBar.addSpacer()
 
-        @toolBar.addButton
-            icon: 'code-working'
-            callback: 'whitespace:convert-spaces-to-tabs'
-            tooltip: 'Convert Spaces to Tabs'
-            iconset: 'ion'
+        if atom.packages.getLoadedPackage('open-in-sourcetree')
+            @toolBar.addButton
+                icon: 'sourcetree-plain'
+                callback: 'open-in-sourcetree:open'
+                tooltip: 'Open in SourceTree'
+                iconset: 'devicon'
+        if atom.config.get('toolbar-custom.convert-spaces-to-tabs')
+            @toolBar.addButton
+                icon: 'code-working'
+                callback: 'whitespace:convert-spaces-to-tabs'
+                tooltip: 'Convert Spaces to Tabs'
+                iconset: 'ion'
 
         if atom.inDevMode()
             @toolBar.addSpacer()
