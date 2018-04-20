@@ -7,7 +7,7 @@ module.exports =
             default: true
 
     activate: (state) ->
-        require('atom-package-deps').install('tool-bar-main')
+        require('atom-package-deps').install('toolbar-custom')
 
     deactivate: ->
         @toolBar?.removeItems()
