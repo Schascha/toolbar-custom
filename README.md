@@ -3,6 +3,8 @@
 Simple tool bar using [tool-bar](https://atom.io/packages/tool-bar) package.
 Inspired by [suda/tool-bar-main](https://atom.io/packages/tool-bar-main).
 
+![Custom Toolbar](screenshot.png)
+
 ## Buttons
 
 * New File
