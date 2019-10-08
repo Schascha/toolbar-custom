@@ -1,6 +1,10 @@
 module.exports =
 
     config:
+        'save':
+            title: 'Enable Save'
+            type: 'boolean'
+            default: true
         'convert-spaces-to-tabs':
             title: 'Enable Convert Spaces to Tabs'
             type: 'boolean'
@@ -18,51 +22,42 @@ module.exports =
         @toolBar = toolBar 'main-tool-bar'
 
         @toolBar.addButton
-            icon: 'document'
+            icon: 'file'
             callback: 'application:new-file'
             tooltip: 'New File'
-            iconset: 'ion'
+
         @toolBar.addButton
-            icon: 'folder'
+            icon: 'file-directory'
             callback: 'application:open-file'
             tooltip: 'Open...'
-            iconset: 'ion'
-        @toolBar.addButton
-            icon: 'archive'
-            callback: 'core:save'
-            tooltip: 'Save'
-            iconset: 'ion'
 
-        @toolBar.addSpacer()
+        if atom.config.get('toolbar-custom.save')
+            @toolBar.addButton
+                icon: 'clippy'
+                callback: 'core:save'
+                tooltip: 'Save'
 
         @toolBar.addButton
             icon: 'search'
-            callback: 'find-and-replace:show'
-            tooltip: 'Find in Buffer'
-            iconset: 'ion'
-        @toolBar.addButton
-            icon: 'shuffle'
-            callback: 'find-and-replace:show-replace'
-            tooltip: 'Replace in Buffer'
-            iconset: 'ion'
+            callback: 'find-and-replace:toggle'
+            tooltip: 'Toggle Find and Replace'
 
         @toolBar.addSpacer()
 
         @toolBar.addButton
-            icon: 'social-github'
+            icon: 'mark-github'
             callback: 'github:toggle-git-tab'
             tooltip: 'Toggle Git Tab'
-            iconset: 'ion'
+
         @toolBar.addButton
-            icon: 'navicon-round'
+            icon: 'three-bars'
             callback: 'command-palette:toggle'
             tooltip: 'Toggle Command Palette'
-            iconset: 'ion'
+
         @toolBar.addButton
-            icon: 'gear-a'
+            icon: 'gear'
             callback: 'settings-view:open'
             tooltip: 'Open Settings View'
-            iconset: 'ion'
 
         @toolBar.addSpacer()
 
@@ -72,21 +67,21 @@ module.exports =
                 callback: 'open-in-sourcetree:open'
                 tooltip: 'Open in SourceTree'
                 iconset: 'devicon'
+
         if atom.config.get('toolbar-custom.convert-spaces-to-tabs')
             @toolBar.addButton
-                icon: 'code-working'
+                icon: 'code'
                 callback: 'whitespace:convert-spaces-to-tabs'
                 tooltip: 'Convert Spaces to Tabs'
-                iconset: 'ion'
 
         if atom.inDevMode()
             @toolBar.addSpacer()
 
             @toolBar.addButton
-                icon: 'refresh'
+                icon: 'sync'
                 callback: 'window:reload'
                 tooltip: 'Reload Window'
-                iconset: 'ion'
+
             @toolBar.addButton
                 icon: 'terminal'
                 callback: ->
